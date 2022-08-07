@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, useState } from 'react';
 import { CartIco, CartIcoTotal, IconsWrapper, UserIco, UserIcomenu } from './icons.styled';
 // import cart from './cart.svg';
 // import cart from './notofocation.svg';
@@ -6,7 +6,8 @@ import { CartIco, CartIcoTotal, IconsWrapper, UserIco, UserIcomenu } from './ico
 
 const CartIcoTotalNUmber: number = 2;
 
-const Icons = () => {
+const Icons: FC = () => {
+    const [state, setState] = useState<boolean>(false)
     return (
         <IconsWrapper>
             <CartIco>
@@ -17,14 +18,13 @@ const Icons = () => {
                 </CartIcoTotal>
             </CartIco>
             <img src='./notification.png' />
-            <UserIco>
+            <UserIco onMouseEnter={() => setState(true)} onMouseLeave={() => setState(false)}>
                 <img src='./user.png' />
-                <UserIcomenu>
+                <UserIcomenu disp={state}>
                     Login / signUp
                 </UserIcomenu>
             </UserIco>
         </IconsWrapper>
-
     )
 }
 export default Icons;

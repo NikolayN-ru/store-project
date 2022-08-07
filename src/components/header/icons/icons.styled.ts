@@ -40,15 +40,20 @@ export const UserIco = styled('div')`
 }
 `
 
-export const UserIcomenu = styled('div')`
+export const UserIcomenu = styled('div') <{ disp?: boolean }>`
 & {
     width: 200px;
     height: 50px;
     background-color: #12BC51;
     position: absolute;
-    bottom: -60px;
+    opacity: ${(({ disp }) => disp ? '1' : '0')};
+    bottom: ${(({ disp }) => disp ? '-50px' : '-80px')};
     right: 0;
-    /* display: none; */
+    display: ${(({ disp }) => disp ? 'block' : 'none')};
+    transition: all 0.3s;
 
+}
+&:hover {
+    display:block;
 }
 `

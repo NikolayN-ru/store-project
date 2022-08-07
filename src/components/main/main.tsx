@@ -1,14 +1,17 @@
 import React, { FC } from "react"
+import BreadCamps from "./breadCamps";
 import FilterBlock from "./filterBlock/";
-import { MainWrapper } from "./main.styled";
+import Items from "./items";
+import { MainContent, MainWrapper } from "./main.styled";
 
-const Main:FC = () => {
+const Main: FC = () => {
     return (
         <MainWrapper>
-            <FilterBlock/>
-            
-            main-block
-
+            <FilterBlock />
+            <MainContent>
+                <BreadCamps />
+                <Items />
+            </MainContent>
         </MainWrapper>
     )
 }
