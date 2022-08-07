@@ -16,6 +16,7 @@ export const ItemWrapper = styled('div')`
     cursor: pointer;
     gap: 20px;
     position: relative;
+
 }
 
 &:hover {

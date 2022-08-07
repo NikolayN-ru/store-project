@@ -1,17 +1,20 @@
 import React, { FC } from "react"
+import { Link } from "react-router-dom";
 import { ItemWrapper, ItemButton, ItemImage, ItemPrice, ItemTitle, ItemLike } from "./item.styled";
 
-const Item: FC = () => {
+const Item: FC<any> = ({ link }) => {
     return (
-        <ItemWrapper>
-            <ItemLike />
-            <ItemImage />
-            <ItemTitle>
-                Drops Air
-            </ItemTitle>
-            <ItemPrice>332 ₽ </ItemPrice>
-            <ItemButton>в корзину</ItemButton>
-        </ItemWrapper>
+        <Link to={`/item/${Number(link)}`}>
+            <ItemWrapper>
+                <ItemLike />
+                <ItemImage />
+                <ItemTitle>
+                    Drops Air
+                </ItemTitle>
+                <ItemPrice>332 ₽ </ItemPrice>
+                <ItemButton>в корзину</ItemButton>
+            </ItemWrapper>
+        </Link>
     )
 }
 

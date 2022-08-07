@@ -17,10 +17,14 @@ export const HeaderMenuWrapper = styled('ul')`
 
 export const HeadeMenuItem = styled('li')`
 & {
+    
+    a {
+        text-decoration: none;
+        color: white;
+    }
 
-}
-
-&:hover {
+    a:hover {
         color: red;
+}
 }
 `
