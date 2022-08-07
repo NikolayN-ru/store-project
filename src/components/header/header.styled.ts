@@ -1,14 +1,38 @@
 import styled from 'styled-components';
 
-export const OneDiv = styled('div')`
+export const HeaderWrapper = styled('div')`
+& {
+    max-width: 1440px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7AC751;
+    color: white;
+    margin-bottom: 30px;
+}
+`
+
+export const OneDiv = styled('div') <{ color?: string }>`
 & {
     display: inline-block;
     border-radius: 3px;
     padding: 0.5rem 0;
     margin: 0.5rem 1rem;
     width: 11rem;
-    background: red;
+    background: ${_ => _.color ? _.color : 'black'};
     color: white;
     border: 2px solid white;
+}
+`
+
+export const Logo = styled('img')`
+& {
+    src: './logo.svg'
+    /* background-image: url('./logo192.png'); */
+    /* width: 30px; */
+    /* height: 30px; */
 }
 `

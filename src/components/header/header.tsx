@@ -1,16 +1,19 @@
-import React from "react"
+import React, { FC } from "react"
 import { useState } from "react"
-import { OneDiv } from "./header.styled"
+import { HeaderWrapper, Logo, OneDiv } from "./header.styled"
+import HeaderMenu from "./headerMenu"
+import Icons from "./icons"
+import InputPanel from "./inputPanel"
 
 
-const Header = () => {
-    // const [asd, setAsd] = useState<any>()
+const Header:FC = () => {
     return (
-        <div>
-            <OneDiv>
-                HEADER
-            </OneDiv>
-        </div>
+        <HeaderWrapper>
+            <Logo/>
+            <HeaderMenu />
+            <InputPanel />
+            <Icons />
+        </HeaderWrapper>
     )
 }
 
