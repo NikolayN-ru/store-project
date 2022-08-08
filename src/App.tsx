@@ -8,6 +8,7 @@ import About from './components/about';
 import Blog from './components/blog';
 import Needles from './components/needles';
 import Item from './components/item';
+import Product from './components/product';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/yarn" element={<Main />} />
         <Route path="/needles" element={<Needles />} />
+        <Route path="/product" element={<Product />} />
         <Route path="/" element={<Main />} />
         <Route path="/item/:itemId" element={<Item />} />
       </Routes>

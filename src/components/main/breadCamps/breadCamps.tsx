@@ -1,12 +1,20 @@
 import React, { FC } from "react"
-import { BreadCampsWrapper } from "./bradCamps.styled";
+import { BreadCampsLink, BreadCampsWrapper } from "./bradCamps.styled";
 
 
 
 const BreadCamps: FC = () => {
     return (
         <BreadCampsWrapper>
-            BreadCamps / MAIN / ITEM[1] / task
+            <BreadCampsLink>
+                / BreadCamps
+            </BreadCampsLink>
+            <BreadCampsLink>
+                / mock
+            </BreadCampsLink>
+            <BreadCampsLink>
+                / Data[1]
+            </BreadCampsLink>
         </BreadCampsWrapper>
     )
 }

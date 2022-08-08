@@ -7,15 +7,19 @@ export const FilterBlockWrapper = styled('div')`
     flex-direction: column;
     /* background-color: #919; */
     margin-left: 60px;
+    padding: 20px;
+    align-self: flex-start;
+    padding-top: 50px;
 
 }
 `
 
 export const HeaderBlock = styled('h2')`
 & {
-    color: 424242;
-    font-size: 16px;
+    color: #555555;
+    font-size: 18px;
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 `
 
@@ -30,7 +34,6 @@ export const FilterCoast = styled('div')`
 export const Input = styled('input')`
 & {
     type: range;
-    
 }
 `
 
@@ -38,7 +41,7 @@ export const FilterCompound = styled('div')`
 & {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-bottom: 20px;
     border-bottom: 1px solid #BDBDBD;
 }

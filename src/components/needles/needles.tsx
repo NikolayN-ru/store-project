@@ -4,7 +4,7 @@ import { NeedlesWrapper } from "./needles.styled";
 const Needles: FC = () => {
     return (
         <NeedlesWrapper>
-            NeedlesWrapper
+            Needles
         </NeedlesWrapper>
     )
 }

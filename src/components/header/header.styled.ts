@@ -12,6 +12,7 @@ export const HeaderWrapper = styled('div')`
     background-color: #7AC751;
     color: white;
     margin-bottom: 30px;
+    padding-top: 5px;
 }
 `
 

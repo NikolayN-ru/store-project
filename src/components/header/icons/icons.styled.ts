@@ -32,28 +32,37 @@ export const CartIcoTotal = styled('div')`
 export const UserIco = styled('div')`
 & {
     position: relative;
-
 }
-
 &:hover {
-
 }
 `
 
 export const UserIcomenu = styled('div') <{ disp?: boolean }>`
 & {
-    width: 200px;
+    width: 180px;
     height: 50px;
-    background-color: #12BC51;
+    background-color: #1f7843;
     position: absolute;
     opacity: ${(({ disp }) => disp ? '1' : '0')};
     bottom: ${(({ disp }) => disp ? '-50px' : '-80px')};
-    right: 0;
+    right: -25px;
     display: ${(({ disp }) => disp ? 'block' : 'none')};
     transition: all 0.3s;
-
+    border-radius: 30px;
+    padding-left: 40px;
+    padding-top: 15px;
+    box-sizing: border-box;
 }
 &:hover {
     display:block;
+}
+`
+
+export const UserIcomenuText = styled('span')`
+& {
+    color: white;
+}
+&:hover {
+    opacity: 0.5;
 }
 `

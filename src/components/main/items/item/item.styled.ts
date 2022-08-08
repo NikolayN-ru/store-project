@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const ItemWrapper = styled('div')`
 & {
-    /* width: 100%; */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -16,7 +15,6 @@ export const ItemWrapper = styled('div')`
     cursor: pointer;
     gap: 20px;
     position: relative;
-
 }
 
 &:hover {
@@ -27,14 +25,13 @@ export const ItemWrapper = styled('div')`
 export const ItemLike = styled('img')`
 & {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 15px;
+    right: 15px;
 }
 `
 
 export const ItemTitle = styled('p')`
 & {
-    
 }
 `
 
@@ -47,7 +44,7 @@ export const ItemPrice = styled('p')`
 
 export const ItemImage = styled('img')`
 & {
-    src: './image.png';
+    /* src: "image.png"; */
 }
 `
 
@@ -65,5 +62,6 @@ export const ItemButton = styled('button')`
 }
 &:hover {
     opacity: 0.8;
+    background-color: #1f7843;
 }
 `

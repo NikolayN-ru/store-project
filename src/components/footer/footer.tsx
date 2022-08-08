@@ -1,10 +1,11 @@
 import React, { FC } from "react"
-import { FooterWrapper } from "./footer.styled";
+import { FooterWrapper, Social } from "./footer.styled";
 
 const Footer:FC = () => {
     return (
         <FooterWrapper>
-            FOOTER
+            <Social src='vk.svg'/>
+            <Social src='telegram.svg'/>
         </FooterWrapper>
     )
 }

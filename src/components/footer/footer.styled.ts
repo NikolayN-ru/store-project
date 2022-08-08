@@ -7,5 +7,15 @@ export const FooterWrapper = styled('div')`
     height: 50px;
     margin: 0 auto;
     padding: 0 20px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 20px;
+}
+`
+export const Social = styled('img')`
+& {
+    width: 50px;
+    height: 50px;
 }
 `

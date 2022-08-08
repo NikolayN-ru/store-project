@@ -6,8 +6,8 @@ const Item: FC<any> = ({ link }) => {
     return (
         <Link to={`/item/${Number(link)}`}>
             <ItemWrapper>
-                <ItemLike />
-                <ItemImage />
+                <ItemLike src='like.svg' />
+                <ItemImage src='image.png'/>
                 <ItemTitle>
                     Drops Air
                 </ItemTitle>
