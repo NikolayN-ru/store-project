@@ -1,6 +1,6 @@
 import React from "react"
 import {Link, useLocation, useParams} from "react-router-dom";
-import {HeadeMenuItem, HeaderMenuWrapper} from "./headerMenu.styled";
+import {HeaderMenuItem, HeaderMenuWrapper} from "./headerMenu.styled";
 
 // const stateItems = ['Mafil', 'Sandnes Garn', 'Infinity', 'Laines Du Nord', 'Lana Gatto', 'Lana Grossa', 'Mondial', 'Ecafil', 'Drops', 'Host Garn', 'Soft Donigal Tweed']
 
@@ -48,9 +48,9 @@ const HeaderMenu = () => {
 			{stateItems.map((item, id) => {
 				const isSelect = pathname.startsWith(`/${item.link}`)
 				return (
-					<HeadeMenuItem key={id} select={isSelect}>
+					<HeaderMenuItem key={id} select={isSelect}>
 						<Link to={item.link}>{item.title}</Link>
-					</HeadeMenuItem>
+					</HeaderMenuItem>
 				)
 			})}
 		</HeaderMenuWrapper>

@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import {Link} from "react-router-dom";
 
 
 export const HeaderMenuWrapper = styled('ul')`
@@ -16,7 +17,12 @@ export const HeaderMenuWrapper = styled('ul')`
   }
 `
 
-export const HeadeMenuItem = styled('li')<{ select: boolean }>`
+interface Props {
+  select: boolean
+}
+
+
+export const HeaderMenuItem = styled('li')<Props>`
   & {
     ${props => {
       if (props.select) {
@@ -31,17 +37,22 @@ export const HeadeMenuItem = styled('li')<{ select: boolean }>`
 
       return ''
     }}
-    a {
-      padding: 10px;
-      text-decoration: none;
-      color: #555555;
-      border-radius: 5px;
-      font-size: 20px;
-    }
+    
+  }
+`
 
-    a:hover {
-      background-color: #1f7843;
-      color: white;
-    }
+
+const CustomLink = styled(Link)<Props>`
+  & {
+    padding: 10px;
+    text-decoration: none;
+    color: #555555;
+    border-radius: 5px;
+    font-size: 20px;
+  }
+  
+  &:hover {
+    background-color: #1f7843;
+    color: white;
   }
 `

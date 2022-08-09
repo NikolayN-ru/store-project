@@ -5,7 +5,6 @@ import Icons from "./icons"
 import InputPanel from "./inputPanel"
 import HeaderMenu from "./headerMenu";
 
-
 const Header:FC = () => {
     return (
         <HeaderWrapper>

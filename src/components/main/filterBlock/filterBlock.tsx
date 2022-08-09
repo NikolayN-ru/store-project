@@ -5,6 +5,8 @@ const state = ["меринос", "кашемир", "ангора", "лама", "
 const stateMetr = ["50-100", "100-150", "150-200", "250-300", "свыше 300"]
 
 const FilterBlock: FC = () => {
+	
+	
 	return (
 		<FilterBlockWrapper>
 			<HeaderBlock>
