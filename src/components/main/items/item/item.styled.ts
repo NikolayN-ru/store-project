@@ -22,7 +22,7 @@ export const ItemWrapper = styled('div')`
 }
 `
 
-export const ItemLike = styled('img')`
+export const ItemLike = styled('div')`
 & {
     position: absolute;
     top: 15px;
