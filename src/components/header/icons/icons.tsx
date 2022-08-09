@@ -1,33 +1,35 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useCallback, useState } from 'react';
 import { CartIco, CartIcoTotal, IconsWrapper, UserIco, UserIcomenu, UserIcomenuText } from './icons.styled';
-// import cart from './cart.svg';
-// import cart from './notofocation.svg';
-// import cart from './user.svg';
 
 const CartIcoTotalNUmber: number = 2;
 
+const useToggle = (initialState: any) => {
+    const [isToggled, setIsToggled] = useState(initialState);
+    const toggle = useCallback(() => setIsToggled(!isToggled), [isToggled]);
+    console.log(isToggled, 'isToggled')
+    return [isToggled, toggle];
+}
+
 const Icons: FC = () => {
-    const [state, setState] = useState<boolean>(false)
+    const [isToggled, toggle] = useToggle(false)
     return (
         <IconsWrapper>
             <CartIco>
                 <img src="cart.svg" alt='cart' />
-                {/* <img src="image.png" alt='cart' /> */}
                 <CartIcoTotal>
                     {CartIcoTotalNUmber}
                 </CartIcoTotal>
             </CartIco>
             <img src='notification.svg' />
-            <UserIco onMouseEnter={() => setState(true)} onMouseLeave={() => setState(false)}>
+            <UserIco onMouseEnter={toggle} onMouseLeave={toggle}>
                 <img src='user.svg' />
-                <UserIcomenu disp={state}>
+                <UserIcomenu disp={isToggled}>
                     <UserIcomenuText>
                         Login /
                     </UserIcomenuText>
                     <UserIcomenuText>
                         / signUp
                     </UserIcomenuText>
-
                 </UserIcomenu>
             </UserIco>
         </IconsWrapper>
