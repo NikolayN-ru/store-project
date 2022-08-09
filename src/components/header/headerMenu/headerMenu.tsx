@@ -1,6 +1,6 @@
 import React from "react"
 import {Link, useLocation, useParams} from "react-router-dom";
-import {HeaderMenuItem, HeaderMenuWrapper} from "./headerMenu.styled";
+import {CustomLink, HeaderMenuItem, HeaderMenuWrapper} from "./headerMenu.styled";
 
 // const stateItems = ['Mafil', 'Sandnes Garn', 'Infinity', 'Laines Du Nord', 'Lana Gatto', 'Lana Grossa', 'Mondial', 'Ecafil', 'Drops', 'Host Garn', 'Soft Donigal Tweed']
 
@@ -49,7 +49,7 @@ const HeaderMenu = () => {
 				const isSelect = pathname.startsWith(`/${item.link}`)
 				return (
 					<HeaderMenuItem key={id} select={isSelect}>
-						<Link to={item.link}>{item.title}</Link>
+						<CustomLink select={isSelect} to={item.link}>{item.title}</CustomLink>
 					</HeaderMenuItem>
 				)
 			})}

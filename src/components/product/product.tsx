@@ -7,6 +7,7 @@ const Product = () => {
     return (
         <ProductWrapper>
             Product
+          
         </ProductWrapper>
     )
 }

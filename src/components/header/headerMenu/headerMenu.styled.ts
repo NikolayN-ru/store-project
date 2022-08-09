@@ -24,6 +24,7 @@ interface Props {
 
 export const HeaderMenuItem = styled('li')<Props>`
   & {
+    height: 100%;
     ${props => {
       if (props.select) {
         return css`
@@ -42,7 +43,7 @@ export const HeaderMenuItem = styled('li')<Props>`
 `
 
 
-const CustomLink = styled(Link)<Props>`
+export const CustomLink = styled(Link)<Props>`
   & {
     padding: 10px;
     text-decoration: none;
