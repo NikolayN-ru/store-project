@@ -1,14 +1,14 @@
 import React, { FC } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from './components/footer';
-import Header from './components/header';
-import Main from './components/main';
-import About from './components/about';
-import Blog from './components/blog';
-import Needles from './components/needles';
-import Item from './components/item';
-import Product from './components/product';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import Main from './pages/Main/Main';
+import About from './pages/About/About';
+import Blog from './pages/Blog/Blog';
+import Needles from './pages/Needles/Needles';
+import Item from './pages/Item/Item';
+import Product from './pages/Product/Product';
 
 
 function App() {

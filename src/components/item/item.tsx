@@ -1,35 +1,25 @@
-import React, { FC } from "react";
-import { useParams } from "react-router";
-import { DescriptionMain, DescriptionPrice, DescriptionTitle, DescriptionWrapper, ItemWrapper, PhotoMain, PhotoPet, PhotoWrapper, WrapperPhotoPet } from "./item.styled";
-import image from '../../assets/image.png';
+import React, { FC } from "react"
+import { Link } from "react-router-dom";
+import { LikeIcon } from "../Icons/Like";
 
-const Item: FC = () => {
+import { ItemWrapper, ItemButton, ItemImage, ItemPrice, ItemTitle, ItemLike } from "./Item.styled";
 
-    const { itemId } = useParams();
-
+const Item: FC<any> = ({ link }) => {
     return (
-        <ItemWrapper>
-            <PhotoWrapper>
-                {/* <PhotoMain src='image.png' /> */}
-                <PhotoMain src={image} />
-                <WrapperPhotoPet>
-                    <PhotoPet src='image.png' />
-                    <PhotoPet src='image.png' />
-                    <PhotoPet src='image.png' />
-                </WrapperPhotoPet>
-            </PhotoWrapper>
-            <DescriptionWrapper>
-                <DescriptionTitle>
-                    Mafil kajal || link Id - {itemId}
-                </DescriptionTitle>
-                <DescriptionMain>
-                    Мета тег description (мета-описание, «дескрипшн») предназначен для создания краткого описания html-страницы. Его содержимое может использоваться поисковыми системами для формирования сниппета. Данный тег не влияет на внешний вид страницы, так как является служебной информацией
-                </DescriptionMain>
-                <DescriptionPrice>
-                    555 y.e.
-                </DescriptionPrice>
-            </DescriptionWrapper>
-        </ItemWrapper>
+        <Link to={`/item/${Number(link)}`}>
+            <ItemWrapper>
+                {/* <ItemLike src='like.svg' /> */}
+                <ItemLike>
+                    <LikeIcon isSelected={true}/>
+                </ItemLike>
+                <ItemImage src='image.png'/>
+                <ItemTitle>
+                    Drops Air
+                </ItemTitle>
+                <ItemPrice>332 ₽ </ItemPrice>
+                <ItemButton>в корзину</ItemButton>
+            </ItemWrapper>
+        </Link>
     )
 }
 

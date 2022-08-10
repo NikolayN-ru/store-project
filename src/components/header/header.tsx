@@ -1,10 +1,10 @@
 import React, { FC } from "react"
 import { useState } from "react"
-import { HeaderWrapper, Logo, OneDiv } from "./header.styled"
+import { HeaderWrapper, Logo, OneDiv } from "./Header.styled"
 
-import Icons from "./icons"
-import InputPanel from "./inputPanel"
-import HeaderMenu from "./headerMenu"
+import Icons from "../Icons/Icons"
+import InputPanel from "../InputPanel/InputPanel"
+import HeaderMenu from "../HeaderMenu/HeaderMenu"
 
 
 const Header:FC = () => {

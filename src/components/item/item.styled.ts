@@ -2,72 +2,66 @@ import styled from 'styled-components';
 
 export const ItemWrapper = styled('div')`
 & {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 50px;
-    margin-bottom: 40px;
-}
-`
-
-export const PhotoWrapper = styled('div')`
-& {
-    max-width: 500px;
-}
-`
-
-export const PhotoMain = styled('img')`
-& {
-    height: 200px;
-    /* max-width: 500px; */
-}
-`
-export const WrapperPhotoPet = styled('div')`
-& {
-}
-`
-
-export const PhotoPet = styled('img')`
-& {
-    /* width: 100px; */
-    /* height: 100px; */
-}
-`
-
-// DESCRIPTION
-export const DescriptionWrapper = styled('div')`
-& {
-    border-left: 1px solid #555;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 245px;
+    height: 422px;
+    padding: 20px;
+    box-shadow: 0px 0px 30px rgba(68, 68, 68, 0.05);
+    border-radius: 20px;
+    cursor: pointer;
+    gap: 20px;
+    position: relative;
+}
+
+&:hover {
+    box-shadow: 20px 20px 90px rgba(68, 68, 68, 0.15);
 }
 `
 
-export const DescriptionTitle = styled('div')`
+export const ItemLike = styled('div')`
 & {
-    color: #555;
-    font-size: 24px;
-    padding-left: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 `
 
-export const DescriptionMain = styled('div')`
+export const ItemTitle = styled('p')`
 & {
-    max-width: 400px;
-    color: #555;
+}
+`
+
+export const ItemPrice = styled('p')`
+& {
     font-size: 16px;
-    padding-left: 30px;
-    opacity: 0.8;
+    line-height: 20px;
 }
 `
 
-export const DescriptionPrice = styled('div')`
+export const ItemImage = styled('img')`
 & {
-    max-width: 400px;
-    color: #555;
-    font-size: 20px;
-    padding-left: 30px;
+    /* src: "image.png"; */
+}
+`
+
+export const ItemButton = styled('button')`
+& {
+    width: 129px;
+    height: 40px;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #7AC751;
+    border:none;
+    cursor: alias;
+}
+&:hover {
     opacity: 0.8;
+    background-color: #1f7843;
 }
 `
