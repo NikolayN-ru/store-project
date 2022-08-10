@@ -7,9 +7,8 @@ import Main from './pages/Main/Main';
 import About from './pages/About/About';
 import Blog from './pages/Blog/Blog';
 import Needles from './pages/Needles/Needles';
-import Item from './pages/Item/Item';
 import Product from './pages/Product/Product';
-
+import Wares from './pages/Wares/Wares';
 
 function App() {
   return (
@@ -20,9 +19,9 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/yarn" element={<Main />} />
         <Route path="/needles" element={<Needles />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/product" element={<Wares />} />
         <Route path="/" element={<Main />} />
-        <Route path="/item/:itemId" element={<Item />} />
+        <Route path="/item/:itemId" element={<Product />} />
       </Routes>
       <Footer />
     </Router>
