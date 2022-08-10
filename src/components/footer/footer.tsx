@@ -1,11 +1,13 @@
 import React, { FC } from "react"
 import { FooterWrapper, Social } from "./Footer.styled";
+import Telegram from "./Telegram";
+import Vk from "./Vk";
 
 const Footer:FC = () => {
     return (
         <FooterWrapper>
-            <Social src='vk.svg'/>
-            <Social src='telegram.svg'/>
+            <Vk />
+            <Telegram />
         </FooterWrapper>
     )
 }

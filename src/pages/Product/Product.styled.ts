@@ -12,7 +12,19 @@ export const ItemWrapper = styled('div')`
 
 export const PhotoWrapper = styled('div')`
 & {
-    max-width: 500px;
+    max-width: 800px;
+}
+`
+
+export const PhotoMainWrapper = styled('div')`
+& {
+    border-radius: 10px;
+        border: 1px solid #dadcdc;
+        padding: 10px;
+        width: 400px;
+}
+&:hover {
+    border: 1px solid #51a555;
 }
 `
 
@@ -23,16 +35,24 @@ export const PhotoMain = styled('img')`
 `
 export const WrapperPhotoPet = styled('div')`
 & {
+    margin-top: 20px;
     width: 80px;
     display: flex;
     height: 50px;
+    justify-content: center;
+    align-items: center;
 }
 `
 
 export const PhotoPet = styled('img')`
 & {
-    /* width: 100px; */
-    /* height: 100px; */
+    width: 100px;
+    height: 60px;
+    cursor: pointer;
+}
+
+&:hover {
+    border: 1px solid #51a555;
 }
 `
 
@@ -71,5 +91,26 @@ export const DescriptionPrice = styled('div')`
     font-size: 20px;
     padding-left: 30px;
     opacity: 0.8;
+}
+`
+
+export const ButtonInCart = styled('button')`
+& {
+    cursor: pointer;
+    box-shadow: 1px 2px 16px 3px rgba(54, 58, 69, 0.08);
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    padding: 7px 0;
+    transition: all 0.3s;
+    width: 50%;
+    margin-left: 100px;
+}
+&:hover {
+    opacity: 0.7;
+    background-color: rgb(169, 169, 169);
+    box-shadow: 1px 2px 16px 3px rgba(54, 58, 69, 0.48);
+    transform: scale(1.3);
+    color: #fff;
 }
 `

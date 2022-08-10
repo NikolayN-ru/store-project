@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 export const HeaderMenuWrapper = styled('ul')`
@@ -43,5 +43,19 @@ export const HeaderMenuItem = styled('li') <Props>`
         background-color: #1f7843;
         color: white;
 }
+}
+`
+
+export const MainMenuDrop = styled('ul')`
+& {
+    position: relative;
+    /* padding: 20px; */
+}
+`
+
+export const Catalog = styled('ul')`
+& {
+    /* position: relative; */
+    padding-bottom: 10px;
 }
 `

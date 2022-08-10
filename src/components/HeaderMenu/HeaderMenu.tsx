@@ -1,7 +1,7 @@
-import React, { FC } from "react"
+import React, { FC, useState } from "react"
 import { Link, useParams, useLocation } from "react-router-dom";
-import { HeaderMenuItem, HeaderMenuWrapper } from "./HeaderMenu.styled";
-// const stateItems = ['Mafil', 'Sandnes Garn', 'Infinity', 'Laines Du Nord', 'Lana Gatto', 'Lana Grossa', 'Mondial', 'Ecafil', 'Drops', 'Host Garn', 'Soft Donigal Tweed']
+import MenuDrop from "../MenuYarnMark/MenuYarnMark";
+import { Catalog, HeaderMenuItem, HeaderMenuWrapper, MainMenuDrop } from "./HeaderMenu.styled";
 
 interface stateItemsInterface {
     readonly pk: number;
@@ -19,11 +19,23 @@ const stateItems: ReadonlyArray<Omit<stateItemsInterface, "pk">> = [
 
 const HeaderMenu: FC = () => {
 
-    const {pathname} = useLocation();
-    console.log(pathname)
+    const { pathname } = useLocation();
+
+    const [stateMenu, setStateMenu] = useState(false);
+
+    const toggleMenu = () => {
+        setStateMenu(prev => !prev)
+    }
 
     return (
         <HeaderMenuWrapper>
+            <MainMenuDrop onMouseEnter={() => toggleMenu()} onMouseLeave={() => toggleMenu()}>
+                <Catalog>
+                    каталог
+                </Catalog>
+
+                <MenuDrop state={stateMenu} />
+            </MainMenuDrop>
             {stateItems.map((item, id) => {
                 const isSelect = pathname.startsWith(`/${item.link}`)
                 return (

@@ -20,6 +20,24 @@ export const CartIcoWrapper = styled('div')`
 }
 `
 
+export const CartList = styled('div') <{ disp?: boolean }>`
+& {
+    position:absolute;
+    padding: 20px;
+    width: 150px;
+    height: 350px;
+    cursor: pointer;
+    box-shadow: 1px 2px 16px 3px rgba(54, 58, 69, 0.08);
+    background-color:#fff;
+    color: #555;
+    transition: all 0.3s;
+    top: ${_ => _.disp ? '30px' : '80px'};
+    visibility: ${_ => _.disp ? 'visible' : 'hidden'};
+    opacity: ${_ => _.disp ? 1 : 0};
+    z-index: 2;
+}
+`
+
 export const CartIcoTotal = styled('div')`
 & {
     position: absolute;
@@ -43,8 +61,8 @@ export const UserIco = styled('div')`
 `
 
 const animation = keyframes({
-    '0%':{opacity:0},
-    '100%':{opacity:1}
+    '0%': { opacity: 0 },
+    '100%': { opacity: 1 }
 })
 
 export const UserIcomenu = styled('div') <{ disp?: boolean }>`
@@ -81,3 +99,4 @@ export const UserIcomenuText = styled('span')`
     opacity: 0.5;
 }
 `
+

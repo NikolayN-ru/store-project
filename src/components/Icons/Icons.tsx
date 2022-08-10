@@ -1,5 +1,5 @@
 import React, { FC, useCallback, useState } from 'react';
-import { CartIcoTotal, CartIcoWrapper, IconsWrapper, UserIco, UserIcomenu, UserIcomenuText, IcoItem } from './Icons.styled';
+import { CartIcoTotal, CartIcoWrapper, IconsWrapper, UserIco, UserIcomenu, UserIcomenuText, IcoItem, CartList } from './Icons.styled';
 import cart from '../../assets/cart.svg';
 import notification from '../../assets/notification.svg';
 import user from '../../assets/user.svg';
@@ -16,15 +16,28 @@ const useToggle = (initialState: any) => {
 }
 
 const Icons: FC = () => {
-    const [isToggled, toggle] = useToggle(false)
+    const [isToggled, toggle] = useToggle(false);
+    const [cartState, setCartState] = useToggle(false);
 
     return (
         <IconsWrapper>
-            <CartIcoWrapper>
-                <CartIcon isHover={false} />
+            <CartIcoWrapper onMouseEnter={setCartState} onMouseLeave={setCartState}>
+                <CartIcon isHover={cartState} />
                 <CartIcoTotal>
                     {CartIcoTotalNUmber}
                 </CartIcoTotal>
+                <CartList disp={cartState}>
+                    <hr />
+                    2 товара
+                    <hr />
+                    <div>
+                        1
+                    </div>
+                    <hr />
+                    <div>
+                        2
+                    </div>
+                </CartList>
             </CartIcoWrapper>
             <IcoItem src={notification} />
             <UserIco onMouseEnter={toggle} onMouseLeave={toggle}>
