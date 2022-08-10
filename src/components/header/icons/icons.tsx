@@ -1,12 +1,12 @@
 import React, { FC, useCallback, useState } from 'react';
 import { CartIco, CartIcoTotal, IconsWrapper, UserIco, UserIcomenu, UserIcomenuText } from './icons.styled';
+import cart from '../../../assets/cart.svg';
 
 const CartIcoTotalNUmber: number = 2;
 
 const useToggle = (initialState: any) => {
     const [isToggled, setIsToggled] = useState(initialState);
     const toggle = useCallback(() => setIsToggled(!isToggled), [isToggled]);
-    console.log(isToggled, 'isToggled')
     return [isToggled, toggle];
 }
 
@@ -15,7 +15,8 @@ const Icons: FC = () => {
     return (
         <IconsWrapper>
             <CartIco>
-                <img src="cart.svg" alt='cart' />
+                {/* <img src="cart.svg" alt='cart' /> */}
+                <img src={cart} alt='cart' />
                 <CartIcoTotal>
                     {CartIcoTotalNUmber}
                 </CartIcoTotal>

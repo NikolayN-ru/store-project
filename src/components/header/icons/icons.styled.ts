@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 export const IconsWrapper = styled('div')`
 & {
@@ -37,24 +37,34 @@ export const UserIco = styled('div')`
 }
 `
 
+const animation = keyframes({
+    '0%':{opacity:0},
+    '100%':{opacity:1}
+})
+
 export const UserIcomenu = styled('div') <{ disp?: boolean }>`
 & {
+    /* animation: ${animation} .3s forwards; */
+    display: block;
     width: 180px;
     height: 50px;
     background-color: #1f7843;
     position: absolute;
-    opacity: ${(({ disp }) => disp ? '1' : '0')};
-    bottom: ${(({ disp }) => disp ? '-50px' : '-80px')};
+    /* opacity: ${(({ disp }) => disp ? '1' : '0')}; */
     right: -25px;
-    display: ${(({ disp }) => disp ? 'block' : 'none')};
-    transition: all 0.3s;
+    /* display: ${(({ disp }) => disp ? 'block' : 'none')}; */
+    bottom: ${_ => _.disp ? '-50px' : '-80px'};
+    visibility: ${_ => _.disp ? 'visible' : 'hidden'};
+    transition: all 0.2s ease-in;
     border-radius: 30px;
     padding-left: 40px;
     padding-top: 15px;
     box-sizing: border-box;
 }
+
+
 &:hover {
-    display:block;
+    /* display:block; */
 }
 `
 

@@ -16,14 +16,18 @@ const FilterBlock: FC = () => {
                 </HeaderBlock>
                 <Input />
             </FilterCoast>
-
             <FilterCoast>
                 <HeaderBlock>
                     Метраж:
                 </HeaderBlock>
                 {stateMetr.map((item, id) => {
                     return (
-                        <InputCheckbox key={id} placeholder={item} />
+
+                        <label style={{ display: 'block', fontSize: 15, color: 'rgba(70,70,70,.9)' }}>
+                            <InputCheckbox key={id} placeholder={item} type={'checkbox'} checked={true} />
+                            {item}
+                        </label>
+
                     )
                 })}
             </FilterCoast>

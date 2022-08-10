@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { useParams } from "react-router";
 import { DescriptionMain, DescriptionPrice, DescriptionTitle, DescriptionWrapper, ItemWrapper, PhotoMain, PhotoPet, PhotoWrapper, WrapperPhotoPet } from "./item.styled";
+import image from '../../assets/image.png';
 
 const Item: FC = () => {
 
@@ -9,7 +10,8 @@ const Item: FC = () => {
     return (
         <ItemWrapper>
             <PhotoWrapper>
-                <PhotoMain src='image.png' />
+                {/* <PhotoMain src='image.png' /> */}
+                <PhotoMain src={image} />
                 <WrapperPhotoPet>
                     <PhotoPet src='image.png' />
                     <PhotoPet src='image.png' />

@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import {Link} from "react-router-dom";
 
 
 export const HeaderMenuWrapper = styled('ul')`
@@ -9,16 +10,28 @@ export const HeaderMenuWrapper = styled('ul')`
     color: white;
     gap: 20px;
     cursor: pointer;
-    /* padding: 0 20px; */
-    /* border-right: 2px solid #fff; */
-    /* border-left: 2px solid #fff; */
     align-items: center;
 }
 `
 
-export const HeadeMenuItem = styled('li')`
+interface Props {
+    select: boolean;
+}
+
+export const HeaderMenuItem = styled('li') <Props>`
 & {
-    a {
+    ${props => {
+        if (props.select) {
+            return css`
+                a {
+                    color: red !important;
+                    background-color: #fff !important;
+                }
+                `
+        }
+        return ''
+    }}
+        a {
         padding: 10px;
         text-decoration: none;
         color: #555555;

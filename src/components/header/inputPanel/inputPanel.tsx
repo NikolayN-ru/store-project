@@ -4,7 +4,7 @@ import { Input, InputPanelWrapper } from "./inputPanel.styled";
 const InputPanel = () => {
     return (
         <InputPanelWrapper>
-            <Input />
+            <Input placeholder='строка поиска' />
         </InputPanelWrapper>
     )
 }

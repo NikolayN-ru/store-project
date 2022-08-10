@@ -18,11 +18,12 @@ export const Input = styled('input')`
     margin-bottom: 5px;
     color: #fff;
     font-size: 20px;
-    placeholder: 'строка поиска';
-    
 }
 &:focus {
     outline: none
     /* background-color: none; */
+}
+&::placeholder {
+    color: red;
 }
 `

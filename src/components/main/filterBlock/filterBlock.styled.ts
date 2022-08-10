@@ -49,6 +49,13 @@ export const FilterCompound = styled('div')`
 
 export const InputCheckbox = styled('input')`
 & {
-    /* type: checkbox; */
-}
+     width: 14px;
+     height: 14px;
+     border: 1px solid black;
+ 		border-radius: 4px;
+     outline: none;
+    }		   
+     &:active {
+     background-color: cornflowerblue;
+   }
 `

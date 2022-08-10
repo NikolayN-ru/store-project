@@ -1,6 +1,6 @@
 import React from "react"
-import { Link, useParams } from "react-router-dom";
-import { HeadeMenuItem, HeaderMenuWrapper } from "./headerMenu.styled";
+import { Link, useParams, useLocation } from "react-router-dom";
+import { HeaderMenuItem, HeaderMenuWrapper } from "./headerMenu.styled";
 // const stateItems = ['Mafil', 'Sandnes Garn', 'Infinity', 'Laines Du Nord', 'Lana Gatto', 'Lana Grossa', 'Mondial', 'Ecafil', 'Drops', 'Host Garn', 'Soft Donigal Tweed']
 
 interface stateItemsInterface {
@@ -18,15 +18,18 @@ const stateItems: ReadonlyArray<Omit<stateItemsInterface, "pk">> = [
 ]
 
 const HeaderMenu = () => {
-    // const item = useParams();
-    // console.log(item, 'item');
+
+    const {pathname} = useLocation();
+    console.log(pathname)
+
     return (
         <HeaderMenuWrapper>
             {stateItems.map((item, id) => {
+                const isSelect = pathname.startsWith(`/${item.link}`)
                 return (
-                    <HeadeMenuItem key={id} >
+                    <HeaderMenuItem key={id} select={isSelect}>
                         <Link to={item.link}>{item.title}</Link>
-                    </HeadeMenuItem>
+                    </HeaderMenuItem>
                 )
             })}
         </HeaderMenuWrapper>
