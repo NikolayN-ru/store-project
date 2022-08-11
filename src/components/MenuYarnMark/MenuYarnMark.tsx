@@ -39,7 +39,6 @@ const dataAwesome = [
     { title: 'nameCaterory', data: ['no-data'] }
 ]
 
-// const stateItems = ['Mafil', '', '', '', '', '', '', '', '', '', '']
 
 
 const data = [
