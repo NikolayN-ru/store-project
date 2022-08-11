@@ -12,7 +12,7 @@ export const ButtonAbout = styled('div')`
 & {
     /* margin-left: 300px; */
     color: white;
-    background-color: red;
+    background-color: #555;
     width: min(50%, 400px);
     height: 50px;
     margin-top: calc(50vh - 50px);

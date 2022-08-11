@@ -12,6 +12,8 @@ const InputPanel = () => {
     return (
         <InputPanelWrapper>
             <Input placeholder='строка поиска' onChange={handleChange} value={state}/>
+
+
         </InputPanelWrapper>
     )
 }

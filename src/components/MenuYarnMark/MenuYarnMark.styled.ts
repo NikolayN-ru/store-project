@@ -29,7 +29,7 @@ export const MenuDropOne = styled('div') <{ state: boolean }>`
     z-index: 2;
     visibility: ${_ => _.state ? 'visible' : 'hidden'};
     opacity: ${_ => _.state ? 1 : 0};
-    top: ${_ => _.state ? '15px' : '30px'};
+    top: ${_ => _.state ? '25px' : '40px'};
 }
 /* &:hover {
     

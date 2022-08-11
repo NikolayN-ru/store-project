@@ -1,6 +1,8 @@
 import React, { FC, useState } from "react"
 import { Link, useParams, useLocation } from "react-router-dom";
+import MenuIco from "../Icons/Menu";
 import MenuDrop from "../MenuYarnMark/MenuYarnMark";
+
 import { Catalog, HeaderMenuItem, HeaderMenuWrapper, MainMenuDrop } from "./HeaderMenu.styled";
 
 interface stateItemsInterface {
@@ -31,9 +33,9 @@ const HeaderMenu: FC = () => {
         <HeaderMenuWrapper>
             <MainMenuDrop onMouseEnter={() => toggleMenu()} onMouseLeave={() => toggleMenu()}>
                 <Catalog>
-                    каталог
+                    <MenuIco/>
+                    
                 </Catalog>
-
                 <MenuDrop state={stateMenu} />
             </MainMenuDrop>
             {stateItems.map((item, id) => {

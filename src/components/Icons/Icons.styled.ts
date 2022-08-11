@@ -71,29 +71,27 @@ export const UserIcomenu = styled('div') <{ disp?: boolean }>`
     display: block;
     width: 180px;
     height: 50px;
-    background-color: #1f7843;
+    background-color: #fff;
+
     position: absolute;
     /* opacity: ${(({ disp }) => disp ? '1' : '0')}; */
     right: -25px;
     /* display: ${(({ disp }) => disp ? 'block' : 'none')}; */
     bottom: ${_ => _.disp ? '-50px' : '-80px'};
     visibility: ${_ => _.disp ? 'visible' : 'hidden'};
-    transition: all 0.2s ease-in;
-    border-radius: 30px;
+    box-shadow: 1px 2px 16px 3px rgba(54, 58, 69, 0.08);
+    opacity: ${_ => _.disp ? 1 : 0};
+    transition: all 0.3s ;
+    border-radius: 3px;
     padding-left: 40px;
     padding-top: 15px;
     box-sizing: border-box;
-}
-
-
-&:hover {
-    /* display:block; */
 }
 `
 
 export const UserIcomenuText = styled('span')`
 & {
-    color: white;
+    color: #555;
 }
 &:hover {
     opacity: 0.5;

@@ -4,19 +4,21 @@ export const InputPanelWrapper = styled('div')`
 & {
     max-width: 5000px;
     /* height: 30px; */
-    border: 2px solid #fff;
-    border-radius: 8px;
+    border: 1px solid #fff;
+    border-radius: 5px;
 }
 `
 
 export const Input = styled('input')`
 & {
+    position: relative;
     margin-top: 5px;
     border: none;
-    background-color: #7AC751;
+    background-color: #22303E;
     margin-left: 10px;
     margin-bottom: 5px;
-    color: #fff;
+    color: #62D33E;
+    /* color: #fff; */
     font-size: 20px;
 }
 &:focus {
@@ -24,6 +26,9 @@ export const Input = styled('input')`
     /* background-color: none; */
 }
 &::placeholder {
-    color: red;
+    color: #FFF;
+    font-size: 16PX;
+    opacity: 0.6;
 }
 `
+

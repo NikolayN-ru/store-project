@@ -9,9 +9,9 @@ export const HeaderWrapper = styled('div')`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #7AC751;
+    background-color: #22303E;
     color: white;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     padding-top: 5px;
 }
 `
