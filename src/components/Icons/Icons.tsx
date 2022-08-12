@@ -5,6 +5,7 @@ import notification from '../../assets/notification.svg';
 import user from '../../assets/user.svg';
 import { CartIcon } from './Cart';
 import { BooleanLocale } from 'yup/lib/locale';
+import { Link } from 'react-router-dom';
 
 
 const CartIcoTotalNUmber: number = 2;
@@ -44,7 +45,9 @@ const Icons: FC = () => {
                 <IcoItem src={user} />
                 <UserIcomenu disp={isToggled}>
                     <UserIcomenuText>
-                        Login /
+                        <Link to='/login'>
+                            Login /
+                        </Link>
                     </UserIcomenuText>
                     <UserIcomenuText>
                         / signUp

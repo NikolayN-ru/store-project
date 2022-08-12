@@ -1,11 +1,7 @@
 import React, { FC } from "react"
+import BlogPost from "../../components/BlogPost/BlogPost";
 import ArrowFilterBlog from "../../components/Icons/ArrowFilterBlog";
-import ArrowIco from "../../components/Icons/ArrowIco";
-import Clip from "../../components/Icons/Clip";
-import FilmIco from "../../components/Icons/FilmIco";
-import ImageIco from "../../components/Icons/ImageIco";
 import NewPost from "../../components/NewPost/NewPost";
-import { ButtonAppruve, HrBlog, IconsBlog, IcoWrapper, InputBlock, InputBlogWrapper, NewPostWrapper, TitleBlog } from "../../components/NewPost/NewPost.styled";
 import { ArrowFilterBlogWrapper, BlogFilter, BlogFilterDescription, BlogWrapper } from "./Blog.styled";
 
 const Blog: FC = () => {
@@ -20,6 +16,7 @@ const Blog: FC = () => {
                     </ArrowFilterBlogWrapper>
                 </BlogFilterDescription>
             </BlogFilter>
+            <BlogPost/>
         </BlogWrapper>
     )
 }
