@@ -33,8 +33,8 @@ const HeaderMenu: FC = () => {
         <HeaderMenuWrapper>
             <MainMenuDrop onMouseEnter={() => toggleMenu()} onMouseLeave={() => toggleMenu()}>
                 <Catalog>
-                    <MenuIco/>
-                    
+                    <MenuIco />
+
                 </Catalog>
                 <MenuDrop state={stateMenu} />
             </MainMenuDrop>

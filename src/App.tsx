@@ -10,10 +10,12 @@ import Needles from './pages/Needles/Needles';
 import Product from './pages/Product/Product';
 import Wares from './pages/Wares/Wares';
 import Person from './pages/Person/Person';
+import ExtraHeader from './components/ExtraHeader/ExtraHeader';
 
 function App() {
   return (
     <Router>
+      <ExtraHeader/>
       <Header />
       <Routes>
         <Route path="/about" element={<About />} />

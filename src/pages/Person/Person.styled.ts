@@ -6,6 +6,7 @@ export const PersonWrapper = styled('div')`
     background-color: #fff;
     width: min(850px);
     padding: 20px;
+    height: 70vh;
 }
 `
 

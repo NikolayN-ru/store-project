@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const BreadCampsWrapper = styled('div')`
 & {
+    margin-top: 20px;
     width: 300px;
     display: flex;
     margin-left: 60px;

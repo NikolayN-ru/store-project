@@ -6,6 +6,7 @@ import user from '../../assets/user.svg';
 import { CartIcon } from './Cart';
 import { BooleanLocale } from 'yup/lib/locale';
 import { Link } from 'react-router-dom';
+import PopupLogin from '../PopupLogin/PopupLogin';
 
 
 const CartIcoTotalNUmber: number = 2;
@@ -19,6 +20,7 @@ const useToggle = (initialState: any) => {
 const Icons: FC = () => {
     const [isToggled, toggle] = useToggle(false);
     const [cartState, setCartState] = useToggle(false);
+    const [popup, setPopup] = useState(false);
 
     return (
         <IconsWrapper>
@@ -49,11 +51,16 @@ const Icons: FC = () => {
                             Login /
                         </Link>
                     </UserIcomenuText>
-                    <UserIcomenuText>
-                        / signUp
+                    <UserIcomenuText onClick={() => {setPopup((prev:boolean) => (!prev))}}>
+                        {/* <div > */}
+                            / signUp
+                        {/* </div> */}
                     </UserIcomenuText>
                 </UserIcomenu>
             </UserIco>
+            {
+                popup && <PopupLogin />
+            }
         </IconsWrapper>
     )
 }

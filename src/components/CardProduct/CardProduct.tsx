@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FC, useState } from "react"
 import { Link } from "react-router-dom";
 import { LikeIcon } from "../Icons/Like";
 import image from '../../assets/image.png';
@@ -6,11 +6,14 @@ import image from '../../assets/image.png';
 import { CardProductWrapper, ItemButton, ItemImage, ItemPrice, ItemTitle, ItemLike } from "./CardProduct.styled";
 
 const CardProduct: FC<any> = ({ link }) => {
+    const [stateLike, setStateLike] = useState(false);
     return (
         <Link to={`/item/${Number(link)}`}>
             <CardProductWrapper>
                 <ItemLike>
-                    <LikeIcon isSelected={true} />
+                    <div onMouseEnter={()=> setStateLike(true)} onMouseLeave={() => setStateLike(false)}>
+                    <LikeIcon isSelected={stateLike} />
+                    </div>
                 </ItemLike>
                 <ItemImage src={image} />
                 <ItemTitle>
