@@ -3,23 +3,23 @@ import MenuDropItem from "./MenuDropItem/MenuDropItem";
 import { Icon, MenuDropOne, MenuIco } from "./MenuYarnMark.styled";
 
 const dataItemZero = [
-    { title: 'Вещи', data: ['Кепки', 'Футболки', 'Джинсы'] },
+    { title: 'Вещи', data: ['mackData', 'mackData', 'mackData'] },
     { title: 'data-0', data: ['mackData0',] },
     { title: 'mackData-0', data: ['mackData', 'mackData', 'mackData'] },
     { title: 'mackData', data: ['mackData'] }
 ]
 
 const dataItemOne = [
-    { title: 'Мобильные телефоны', data: ['Смартфоны', 'Xiaomi', 'Samsung', 'Honor', 'Huawei', 'Menzu', 'Nokia', 'Кнопочные телефоны', 'Стилусы'] },
-    { title: 'Гаджеты', data: ['Смарт-часы и браслеты',] },
-    { title: 'Наушники и гарнитуры', data: ['Проводные', 'Беспроводные'] },
-    { title: 'Запчасти', data: ['Дисплеи', 'Аккумуляторы'] },
-    { title: 'Чехлы для смартфонов' },
-    { title: 'Аксессуары для телефонов', data: ['Зарядные устройста', 'Кабели и адаптеры', 'Внешние аккумуляторы', 'Чехлы', 'Держатели', 'Стилусы', 'Защитные стекла и пленки', 'Карты памяти'] }
+    { title: 'mackData mackData', data: ['mackData', 'mackDat-3', 'mackData', 'mackData', 'mackData', 'mackData', 'mackData', 'mackData'] },
+    { title: 'mackData', data: ['mackData', 'mackDat-3', 'mackData'] },
+    { title: 'mackData и mackData', data: ['mackData', 'mackDat-3', 'mackData'] },
+    { title: 'mackData', data: ['mackData', 'mackDat-3', 'mackData'] },
+    { title: 'mackData' },
+    { title: 'mackData', data: ['mackData', 'mackDat-3', 'mackData', 'mackData', 'mackData', 'mackData', 'mackData', 'mackData'] }
 ]
 
 const dataItemTwo = [
-    { title: 'Вещи', data: ['Кепки', 'Футболки', 'Джинсы'] },
+    { title: 'Вещи', data: ['mackData', 'mackData', 'mackData'] },
     { title: 'data-2', data: ['mackData0',] },
     { title: 'mackData-2', data: ['mackData', 'mackData', 'mackData'] },
     { title: 'mackData-2', data: ['mackData'] },
