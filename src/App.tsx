@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import Footer from './components/WrapperComponents/Footer/Footer';
+import Header from './components/WrapperComponents/Header/Header';
 import Main from './pages/Main/Main';
 import About from './pages/About/About';
 import Blog from './pages/Blog/Blog';
@@ -11,6 +11,8 @@ import Product from './pages/Product/Product';
 import Wares from './pages/Wares/Wares';
 import Person from './pages/Person/Person';
 import ExtraHeader from './components/ExtraHeader/ExtraHeader';
+import Cart from './pages/Cart/Cart';
+import Order from './pages/Order/Order';
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/" element={<Main />} />
         <Route path="/item/:itemId" element={<Product />} />
         <Route path="/login" element={<Person />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/order" element={<Order />} />
       </Routes>
       <Footer />
     </Router>

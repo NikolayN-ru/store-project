@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import { ButtonFooter, InputFooter, InputFooterBtn, InputFooterWrapper, LinkMore, ListHeader, ListItem, ListLink } from "./FooterLinks.styled"
-import arrow from '../../../assets/arrow.svg';
+import arrow from '../../../../assets/arrow.svg';
 
 const FooterLinks: FC<any> = ({ state }) => {
     return (

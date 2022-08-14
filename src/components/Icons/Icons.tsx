@@ -25,7 +25,9 @@ const Icons: FC = () => {
     return (
         <IconsWrapper>
             <CartIcoWrapper onMouseEnter={setCartState} onMouseLeave={setCartState}>
+                <Link to={'/cart'}>
                 <CartIcon isHover={cartState} />
+                </Link>
                 <CartIcoTotal>
                     {CartIcoTotalNUmber}
                 </CartIcoTotal>
