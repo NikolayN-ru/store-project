@@ -35,3 +35,19 @@ width: 110%;
 height: 20px;
 }
 `
+
+export const ButtonSelect = styled('div')`
+& {
+    width: 200px;
+    height: 40px;
+    background-color: #ccc;
+    /* margin-top: 30px; */
+    opacity: 0.3;
+    cursor: pointer;
+    border-right: 2px solid #fff;
+}
+&:hover {
+    border-right: 2px solid blue;
+    opacity: .9;
+}
+`

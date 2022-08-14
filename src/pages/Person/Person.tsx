@@ -1,12 +1,11 @@
 import React, { FC } from 'react';
-import { Block1, Block2, Line, PersonWrapper } from './Person.styled';
+import { Block1, Block2, ButtonSelect, Line, PersonWrapper } from './Person.styled';
 
 const Person: FC = () => {
 
     return (
         <PersonWrapper>
             Person-Page
-
             metrics
 
             <Line>
@@ -16,6 +15,11 @@ const Person: FC = () => {
 
             <button onClick={() => { }}>+</button>
             <button onClick={() => { }}>-</button>
+
+            <ButtonSelect>mack-data</ButtonSelect>
+            <ButtonSelect>mack-data</ButtonSelect>
+            <ButtonSelect>mack-data</ButtonSelect>
+            <ButtonSelect>mack-data</ButtonSelect>
         </PersonWrapper>
     )
 }
