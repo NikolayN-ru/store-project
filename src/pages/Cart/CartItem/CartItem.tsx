@@ -1,21 +1,23 @@
 import React, { FC } from "react"
-import { CartItemWrapper, ImgItem } from "./CartItem.styled";
+import { ButtonDelete, CartItemWrapper, ContentParagraph, ImgItem, WrapperContent } from "./CartItem.styled";
 import image2 from '../../../assets/image2.webp';
 
 const CartItem: FC = () => {
     return (
         <CartItemWrapper>
             <ImgItem src={image2} />
-            item
-            <div>
-                <p>Выберите количество:</p>
+            марка-наименование
+            <WrapperContent>
+                <ContentParagraph>
+                    количество:
+                </ContentParagraph>
                 1
-            </div>
-            <div>
-                <p>цена:</p>
+            </WrapperContent>
+            <WrapperContent>
+                <ContentParagraph>цена:</ContentParagraph>
                 555 р
-            </div>
-            <button>убрать</button>
+            </WrapperContent>
+            <ButtonDelete>убрать</ButtonDelete>
         </CartItemWrapper>
     )
 }

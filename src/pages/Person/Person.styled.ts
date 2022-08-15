@@ -2,52 +2,79 @@ import styled from 'styled-components';
 
 export const PersonWrapper = styled('div')`
 & {
-    margin-top: 50px;
-    background-color: #fff;
-    width: min(850px);
+    padding-top: 100px;
+    background-color: #fafafa;
+    text-transform: uppercase;
+    padding-bottom: 300px;
+}
+`
+
+export const PersonTitle = styled('h1')`
+& {
+    text-align: center;
+    padding-bottom: 50px;
+}
+`
+
+export const ContentWrapper = styled('h1')`
+& {
+    display: flex;
+}
+`
+
+export const Content = styled('h1')`
+& {
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 20px;
+    display: flex;
+    background-color: #ddd;
     padding: 20px;
-    height: 70vh;
 }
 `
 
-export const Line = styled('div')`
+export const ButtonWrapper = styled('h1')`
 & {
-    background-color: red;
-    width: 600px;
-    height: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-`
-
-export const Block1 = styled('div')`
-& {
-    background-color: green;
-    width: 80%;
-    height: 20px;
-}
-`
-
-export const Block2 = styled('div')`
-& {
-    background-color: blue;
-width: 110%;
-height: 20px;
+    border-right: 1px solid black;
+    text-align: center;
+    /* padding-bottom: 50px; */
 }
 `
 
 export const ButtonSelect = styled('div')`
 & {
-    width: 200px;
+    width: 230px;
     height: 40px;
     background-color: #ccc;
     /* margin-top: 30px; */
     opacity: 0.3;
     cursor: pointer;
     border-right: 2px solid #fff;
+    padding-left: 100px;
+    padding-top: 30px;
 }
 &:hover {
     border-right: 2px solid blue;
     opacity: .9;
+}
+`
+
+export const ButtonExit = styled('button')`
+& {
+    width: 70px;
+    height: 30px;
+    color: #fff;
+    border: none;
+    background-color: tomato;
+    position: relative;
+    left: 200px;
+    cursor: pointer;
+}
+&:hover {
+    /* border-right: 2px solid blue; */
+    opacity: .7;
+}
+&:active {
+    opacity: 0.4;
 }
 `

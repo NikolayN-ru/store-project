@@ -1,25 +1,36 @@
 import React, { FC } from 'react';
-import { Block1, Block2, ButtonSelect, Line, PersonWrapper } from './Person.styled';
+import { ButtonExit, ButtonSelect, ButtonWrapper, Content, ContentWrapper, PersonTitle, PersonWrapper } from './Person.styled';
 
 const Person: FC = () => {
 
+    interface Iuser {
+        id: number;
+        name: string;
+        phone: number;
+        address: string;
+        likeItem: number[];
+        orderHistory: number[];
+        settings: string | number[];
+    }
+
     return (
         <PersonWrapper>
-            Person-Page
-            metrics
+            <PersonTitle>
+                Страница пользователя
+                <ButtonExit>выйти</ButtonExit>
+            </PersonTitle>
+<ContentWrapper>
+            <ButtonWrapper>
+                <ButtonSelect>персональные данные</ButtonSelect>
+                <ButtonSelect>история заказов</ButtonSelect>
+                <ButtonSelect>избранное</ButtonSelect>
+                <ButtonSelect>настройки</ButtonSelect>
+            </ButtonWrapper>
+            <Content>
+                    Lorem ipsum dolor sit amet.
+            </Content>
+</ContentWrapper>
 
-            <Line>
-                <Block1>1111</Block1>
-                <Block2>2222</Block2>
-            </Line>
-
-            <button onClick={() => { }}>+</button>
-            <button onClick={() => { }}>-</button>
-
-            <ButtonSelect>mack-data</ButtonSelect>
-            <ButtonSelect>mack-data</ButtonSelect>
-            <ButtonSelect>mack-data</ButtonSelect>
-            <ButtonSelect>mack-data</ButtonSelect>
         </PersonWrapper>
     )
 }

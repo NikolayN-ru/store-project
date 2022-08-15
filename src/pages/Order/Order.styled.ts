@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const OrderWrapper = styled('div')`
 & {
     width: 100%;
-    background-color: #E5E5E5;
+    background-color: #fafafa;
     padding: 50px;
 }
 `
@@ -12,12 +12,30 @@ export const ContactsData = styled('div')`
 & {
     margin-top: 30px;
     padding-bottom: 30px;
+    display: flex;
+    gap: 20px;
+}
+`
+
+export const InputOrderWrapper = styled('div')`
+& {
+    margin-left: 40px;   
+    
+}
+`
+
+export const InputOrderTitle = styled('div')`
+& {
+    font-size: 12px;
+    color: #ddd;
+    margin-bottom: 10px;
 }
 `
 
 export const InputOrder = styled('input')`
 & {
-    margin-left: 40px;    
+    border: none;
+    padding: 10px; 
 }
 `
 
@@ -40,6 +58,7 @@ export const Select = styled('div')`
     height: 130px;
     background-color: #fff;
     border: 1.5px solid #fff;
+    padding: 20px;
 }
 &:hover {
     border: 1.5px solid #E30016;
