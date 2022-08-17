@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { PopupDesc, PopupTime, PopupWrapper } from './ExtraHeader.styled';
 
-function App() {
+const App:FC = () => {
     return (
         <PopupWrapper>
             <PopupDesc>

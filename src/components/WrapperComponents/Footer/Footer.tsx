@@ -1,7 +1,7 @@
 import React, { FC } from "react"
 import {  FooterWrapper, } from "./Footer.styled";
-import Telegram from "./Telegram";
-import Vk from "./Vk";
+// import Telegram from "./Telegram";
+// import Vk from "./Vk";
 
 import FooterLinks from "./FooterLinks/FooterLinks";
 

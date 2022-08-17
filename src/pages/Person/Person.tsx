@@ -1,17 +1,17 @@
 import React, { FC } from 'react';
 import { ButtonExit, ButtonSelect, ButtonWrapper, Content, ContentWrapper, PersonTitle, PersonWrapper } from './Person.styled';
 
-const Person: FC = () => {
+interface Iuser {
+    id: number;
+    name: string;
+    phone: number;
+    address: string;
+    likeItem: number[];
+    orderHistory: number[];
+    settings: [];
+}
 
-    interface Iuser {
-        id: number;
-        name: string;
-        phone: number;
-        address: string;
-        likeItem: number[];
-        orderHistory: number[];
-        settings: string | number[];
-    }
+const Person: FC = () => {
 
     return (
         <PersonWrapper>
@@ -19,18 +19,17 @@ const Person: FC = () => {
                 Страница пользователя
                 <ButtonExit>выйти</ButtonExit>
             </PersonTitle>
-<ContentWrapper>
-            <ButtonWrapper>
-                <ButtonSelect>персональные данные</ButtonSelect>
-                <ButtonSelect>история заказов</ButtonSelect>
-                <ButtonSelect>избранное</ButtonSelect>
-                <ButtonSelect>настройки</ButtonSelect>
-            </ButtonWrapper>
-            <Content>
+            <ContentWrapper>
+                <ButtonWrapper>
+                    <ButtonSelect>персональные данные</ButtonSelect>
+                    <ButtonSelect>история заказов</ButtonSelect>
+                    <ButtonSelect>избранное</ButtonSelect>
+                    <ButtonSelect>настройки</ButtonSelect>
+                </ButtonWrapper>
+                <Content>
                     Lorem ipsum dolor sit amet.
-            </Content>
-</ContentWrapper>
-
+                </Content>
+            </ContentWrapper>
         </PersonWrapper>
     )
 }

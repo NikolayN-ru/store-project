@@ -1,8 +1,14 @@
-import React, { FC, useState } from "react"
+import React, { FC } from "react"
 import { Button, ContactsData, InputOrder, InputOrderTitle, InputOrderWrapper, OrderWrapper, Select, TitleWrite, WrapperSelect } from "./Order.styled";
 
 
 const Order: FC = () => {
+// обернуть в форму  2) OrderForm
+
+// one input  настраиваемый инпут через пропсы
+
+{/* <WrapperSelect> */}
+// WrapperSelect - <form> Select - type radio
 
     return (
         <OrderWrapper>

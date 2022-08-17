@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Footer from './components/WrapperComponents/Footer/Footer';
 import Header from './components/WrapperComponents/Header/Header';
 import Main from './pages/Main/Main';
-import About from './pages/About/About';
+// import About from './pages/About/About';
 import Blog from './pages/Blog/Blog';
 import Needles from './pages/Needles/Needles';
 import Product from './pages/Product/Product';
@@ -14,13 +14,19 @@ import ExtraHeader from './components/ExtraHeader/ExtraHeader';
 import Cart from './pages/Cart/Cart';
 import Order from './pages/Order/Order';
 
-function App() {
+const About = React.lazy(()=> import('./pages/About/About'));
+
+const App: FC = () => {
   return (
     <Router>
       <ExtraHeader/>
       <Header />
       <Routes>
-        <Route path="/about" element={<About />} />
+          <Route path="/about" element={
+            <React.Suspense fallback='loading'>
+          <About />
+            </React.Suspense>
+          } />
         <Route path="/blog" element={<Blog />} />
         <Route path="/yarn" element={<Main />} />
         <Route path="/needles" element={<Needles />} />

@@ -10,7 +10,9 @@ const Blog: FC = () => {
             <NewPost/>
             <BlogFilter>
                 <BlogFilterDescription>
-                    Sort by: trending
+                    <p>
+                        Sort by: trending
+                    </p>
                     <ArrowFilterBlogWrapper>
                         <ArrowFilterBlog/>
                     </ArrowFilterBlogWrapper>

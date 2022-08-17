@@ -8,7 +8,7 @@ import { CardProductWrapper, ItemButton, ItemImage, ItemPrice, ItemTitle, ItemLi
 const CardProduct: FC<any> = ({ link }) => {
     const [stateLike, setStateLike] = useState(false);
     return (
-        <Link to={`/item/${Number(link)}`}>
+        <Link to={`/item/${+link}`}>
             <CardProductWrapper>
                 <ItemLike>
                     <div onMouseEnter={()=> setStateLike(true)} onMouseLeave={() => setStateLike(false)}>

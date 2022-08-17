@@ -16,9 +16,13 @@ const Cart: FC = () => {
                     <CartItem />
                 </CartItems>
                 <CartTotal>
-                    итого - 12230р.
+                    <p>
+                        итого - 12230р.
+                    </p>
                     <hr />
-                    промокод код
+                    <p>
+                        промокод код
+                    </p>
                     <InputBonus placeholder="введите код" />
                     <Link to={"/order"}>
                         <ButtonCart>

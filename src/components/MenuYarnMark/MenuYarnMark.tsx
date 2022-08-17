@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import MenuDropItem from "./MenuDropItem/MenuDropItem";
-import { Icon, MenuDropOne, MenuIco } from "./MenuYarnMark.styled";
+import { MenuDropOne } from "./MenuYarnMark.styled";
 
 const dataItemZero = [
     { title: 'Вещи', data: ['mackData', 'mackData', 'mackData'] },

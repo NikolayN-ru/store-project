@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ArrowFilterBlog from '../../components/Icons/ArrowFilterBlog';
+// import ArrowFilterBlog from '../../components/Icons/ArrowFilterBlog';
 
 export const BlogWrapper = styled('div')`
 & {
@@ -16,12 +16,11 @@ export const BlogWrapper = styled('div')`
 
 export const BlogFilter = styled('div')`
 & {
-width: 890px;height: 10px;
-margin-top: 40px;
-border-bottom: 2px solid #E7E7E7;
-/* opacity: 0.4; */
-position: relative;
-
+    width: 890px;
+    height: 10px;
+    margin-top: 40px;
+    border-bottom: 2px solid #E7E7E7;
+    position: relative;
 }
 `
 
@@ -36,11 +35,6 @@ export const BlogFilterDescription = styled('div')`
     background-color: #F7F9FB;
     padding: 20px;
     text-transform: uppercase;
-/* width: 890px;height: 10px; */
-/* margin-top: 40px; */
-/* border-bottom: 2px solid #E7E7E7; */
-/* opacity: 0.4; */
-
 }
 `
 
@@ -50,16 +44,13 @@ export const ArrowFilterBlogWrapper = styled('div')`
     position: absolute;
     top: 0px;
     right: -35px;
-margin-left: 10px;
-/* transform: scale(2); */
-padding: 10px;
-/* padding-top: 0; */
-transition: 0.3s all;
-margin: 10px;
+    margin-left: 10px;
+    padding: 10px;
+    transition: 0.3s all;
+    margin: 10px;
 }
 
 &:hover {
     transform: rotate(180deg);
-    /* transform: scale(2); */
 }
 `

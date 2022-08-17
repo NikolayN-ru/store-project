@@ -1,7 +1,7 @@
-import React, { FC, useState } from "react"
+import React, { FC } from "react"
 import { ButtonClose, Input, PopupWrapper } from "./PopupLogin.styled";
 
-const PopupLogin: FC<any> = ({ }) => {
+const PopupLogin: FC = () => {
     // const [stateLike, setStateLike] = useState(false);
     return (
         <PopupWrapper>
@@ -9,6 +9,7 @@ const PopupLogin: FC<any> = ({ }) => {
             Login
             <Input/>
             <Input/>
+            <button>+</button>
         </PopupWrapper>
     )
 }

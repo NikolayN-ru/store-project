@@ -1,5 +1,5 @@
 import React, { FC } from "react"
-import { useState } from "react"
+// import { useState } from "react"
 import { HeaderWrapper, Logo } from "./Header.styled"
 
 import Icons from "../../Icons/Icons"
