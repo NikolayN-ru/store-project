@@ -32,7 +32,7 @@ const About = React.lazy(() => import('./pages/About/About'));
 
 
 const App: FC = () => {
-  // const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch()
   
   // useEffect(() => {
   //   dispatch(getArticles(filters))
@@ -40,6 +40,15 @@ const App: FC = () => {
   
   const {all} = useAppSelector(state => state.products)
   
+  
+  useEffect(() => {
+    dispatch(getArticles())
+  }, [])
+  
+  
+  useEffect(() => {
+    console.log('Посты: ', all)
+  }, [all])
   return (
     <Context.Provider value={{
       store
